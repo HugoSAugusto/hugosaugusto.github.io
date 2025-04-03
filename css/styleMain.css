@@ -40,20 +40,16 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
+ 
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-}
+    gap: 15px;
 
-nav ul li {
-    display: inline-block;
-    font-size: large;
-    
+    width: auto;
+    height: auto;
 }
 
 nav a {
@@ -157,7 +153,8 @@ footer {
     }
     nav ul {
         flex-direction: row;
-        gap: 10px;
+        width: auto;
+        height: auto;
     }
     .proj {
         grid-template-columns: repeat(2, 1fr);
