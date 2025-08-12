@@ -73,6 +73,19 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.menu-hamburger {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+
 main {
     padding-top: 5%;
 }

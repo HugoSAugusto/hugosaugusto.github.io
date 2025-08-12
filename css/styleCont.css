@@ -76,4 +76,52 @@ section h1.su2 {
     .logos {
         gap: 15px;
     }
+    
+    .menu-hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .menu-hamburger.hide {
+     display: none;
+    }
+
+
+    nav ul {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: rgba(30, 41, 59, 0.85); 
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        flex-direction: column;
+        padding-top: 60px;
+        gap: 0;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+        z-index: 1000;
+    }
+ 
+      nav ul.menu-active {
+        right: 0; 
+    }
+
+      nav ul li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+      nav ul li a {
+        color: var(--text-light);
+        font-size: 1.2em;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+    }
 }
