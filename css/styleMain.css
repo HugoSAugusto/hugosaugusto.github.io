@@ -22,7 +22,7 @@ html {
 }
 
 body {
-   background: linear-gradient(to bottom, #0f172a, #4b5563, #d1d5db);
+     background: linear-gradient(to bottom, #0f172a 0%, #334155 50%, #cbd5e1 100%);
   /* 
     #0f172a = azul bem escuro (topo)
     #4b5563 = cinza azulado médio (meio)
