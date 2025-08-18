@@ -1,0 +1,41 @@
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: flex; /* esconde a barra de rolagem */
+}
+
+.carousel-container #box {
+  flex: 0 0 80%;   /* cada card ocupa 80% da largura */
+  max-width: 350px;
+  scroll-snap-align: start;
+}
+
+/* botões */
+.controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: rgba(0,0,0,0.7);
+}
