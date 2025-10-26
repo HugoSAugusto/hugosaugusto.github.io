@@ -4,202 +4,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Hugo Augusto, desenvolvedor front-end especializado em projetos modernos, responsivos e criativos.">
+    <meta name="author" content="Hugo Augusto">
+    <meta property="og:title" content="Portfólio de Hugo Augusto">
+    <meta property="og:image" content="imagem/profile.png">
+    <meta property="og:description" content="Desenvolvedor Front-End | Projetos modernos e responsivos.">
     <title>HugoSAugusto</title>
-    <link rel="stylesheet" href="css/styleMain.css">
-    <link rel="stylesheet" href="css/styleCont.css">
-    <link rel="stylesheet" href="css/styleCarr.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="./public/style.css">
+    <link rel="shortcut icon" href="imagem/profile.png" type="image/x-icon">
+    
 </head>
 
-<body>
-    <header>
-        <div class="flex1">
-            <h1>Hugo Augusto</h1><br>
-            <h3>Dev Front-End</h3>
+<body class="flex flex-col items-center w-full overflow-x-hidden">
+    <header class="bg-blue-950 text-white shadow-md flex justify-between items-center flex-wrap px-5 py-4 w-full">
+        <div class="pl-20 flex flex-col gap-1 min-w-0">
+            <h1 class="text-3xl sm:text-3xl font-extrabold truncate">Hugo Augusto</h1><br>
+            <h2 class="text-2xl sm:text-2xl truncate">Dev Front-End</h2>
         </div>
-
-        <nav>
-            <ul>
-                <li class="flex1"><a href="#projetos">PROJETOS</a></li>
-                <li class="flex1"><a href="#sobre">SOBRE</a></li>
-                <li class="flex1"><a href="#contato">CONTATO</a></li>
+        <nav class="hidden md:flex flex-col md:flex-row flex-1 justify-end bg-blue-950 text-white absolute md:static top-19 w-full md:-1 transition-all duration-300 ease-in-out overflow-hidden">
+            <ul class="flex flex-col md:flex-row gap-2 md:gap-4 p-2 md:p-0 items-end md:items-center text-right md:text-left">
+                <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#projetos">PROJETOS</a></li>
+                <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#sobre">SOBRE</a></li>
+                <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#sobre">CONTATO</a></li>
             </ul>
         </nav>
 
-        <div class="menu-hamburger" aria-label="Abrir menu" role="button" tabindex="0">
+        <div class="menu-hamburger text-2xl cursor-pointer select-none md:hidden" aria-label="Abrir menu" role="button" tabindex="0">
             ☰
         </div>
     </header>
-    <main>
+    
+    <main class="w-full mt-4 overflow-x-hidden">
+        <section id="projetos" class="w-full flex flex-col items-center bg-blue-950 text-white py-6">
+            <h2 class="text-4xl text-blue-400 font-extrabold mb-8 ">Projetos</h2>
 
-        <section id="projetos">
-            <h1 class ="su">Projetos</h1> 
-        
-            <h1 class ="su">landing Page</h1>
-            <div class="controls">
-                <button class="btn" id="prev-landing">⟨</button>
-                    <div class="carousel-container" id="carousel-landing">
-                    <!-- Site de casais                -->
-                    <div id="box" class="flex">
-                        <a href="https://hugosaugusto.github.io/sites-de-casais/"><img src="imagem/site casais 2.jpeg" alt="Drielly Bolos"></a>
-                        <div>
-                           <h2>Site de casais</h2>
-                        </div>
-                        <hr>
-                        <div>
-                            <p> site simples, que fiz um autnticador em JS para verificar a senha em um banco pré definido. Que leva a um site. Fiz por ter sido um projeto freelancer. </p>
-                        </div>
-                        <hr>
-                        <div class="lin">
-                           <a id="butt" href="https://github.com/HugoSAugusto/sites-de-casais"  target=”_blank”>source</a>
-
-                            <a id="butt" href="https://hugosaugusto.github.io/sites-de-casais/"  target=”_blank”>visitar</a>
-                        </div>
-                    </div>
-                    <!-- Drielly Bolos -->
-                    <div id="box" class="flex">
-                        <a href="https://drielly-bolos.netlify.app/"><img src="imagem/drielly bolos 2.jpeg" alt="Drielly Bolos"></a>
-                        <div>
-                           <h2>Drielly Bolos</h2>
-                        </div>
-                        <hr>
-                        <div>
-                            <p> Landing page otimizada e responsiva, com uma aba dedicada para montar um bolo, e finanlização pelo Whats App com descrição automatico dos itens escolhidos. </p>
-                        </div>
-                        <hr>
-                        <div class="lin">
-                            <a id="butt" href="https://github.com/HugoSAugusto/Drielly---cakes"  target=”_blank”>source</a>
-
-                            <a id="butt" href="https://drielly-bolos.netlify.app/"  target=”_blank”>visitar</a>
-                        </div>
-                    </div>
-                    <!-- Mylla Antunnes -->
-                    <div id="box" class="flex">
-                        <a href="https://hugosaugusto.github.io/Mylla-Antunnes/"><img src="imagem/landingpage mylla antunnes.png" alt="Mylla-antunnes"></a>
-                        <div>
-                            <h2>Mylla Antunnes</h2>
-                        </div>
-                        <hr>
-                        <div>
-                            <p> Landing page otimizada para carregamento rápido, apresentando uma garota criada por mim com inteligência artificial e seus perfis em redes sociais. </p>
-                        </div>
-                        <hr>
-                        <div class="lin">
-                            <a id="butt" href="https://github.com/HugoSAugusto/Mylla-Antunnes"  target=”_blank”>source</a>
-
-                            <a id="butt" href="https://hugosaugusto.github.io/Mylla-Antunnes/"  target=”_blank”>visitar</a>
-                        </div>
-                    </div>
-                    <!-- Nutri - Tati -->
-                    <div id="box" class="flex">
-                        <a href="https://hugosaugusto.github.io/Nutri-Tati/"><img src="imagem/site nutri.png" alt="Nutri-tati"></a>
-                        <div>
-                            <h2>Nutri - Tati</h2>
-                        </div>
-                        <hr>
-                        <div>
-                            <p> Landing page otimizada para carregamento rápido, com animação e abertura fluida, <br> Com responsividade.</p>
-                        </div>
-                        <hr>
-                        <div class="lin">
-                            <a id="butt" href="https://github.com/HugoSAugusto/Nutri-Tati"  target=”_blank”>source</a>
-
-                            <a id="butt" href="https://hugosaugusto.github.io/Nutri-Tati/"  target=”_blank”>visitar</a>
-                        </div>
-                    </div>
-                    <!-- Gerador de frases -->
-                    <div id="box" class="flex">
-                        <a href="https://hugosaugusto.github.io/gerador-de-frases/"><img src="imagem/gerador de frases.png" alt="gerador-de-frases"></a>
-                        <div>
-                            <h2>Gerador de Frases</h2>
-                        </div>
-                        <hr>
-                        <div>
-                            <p> Site interativo que exibe frases aleatórias de acordo com o tema escolhido em cada botão, utilizando JavaScript. </p>
-                        </div>
-                        <hr>
-                        <div class="lin">
-                            <a id="butt" href="https://github.com/HugoSAugusto/gerador-de-frases"  target=”_blank”>source</a>
-
-                            <a id="butt" href="https://hugosaugusto.github.io/gerador-de-frases/"  target=”_blank”>visitar</a>
-                        </div>
-                    </div>
-                    </div>                
-                <button class="btn" id="next-landing">⟩</button>
-            </div>
-
-            <h1 class ="su">Sites Institucionais</h1>
-            <div class="controls">
-                <!-- <button class="btn" id="prev-landing">⟨</button> -->
-                    <div class="carousel-container" id="carousel-landing">
-                        <!-- gurou -->
-                        <div id="box" class="flex">
-                        <a href="#"><img src="imagem/gurou.png" alt="gurou"></a>
-                        <div>
-                            <h2>gurou</h2>
-                        </div>
-                        <hr>
-                        <div>
-                            <p>Página de teste com uma barra de menu responsiva, incluindo submenus para diferentes visualizações.</p>
-                        </div>
-                        <hr>
-                        <div class="lin">
-                            <a id="butt" href="https://github.com/HugoSAugusto/gurou"  target=”_blank”>source</a>
-
-                           <a id="butt" href="#"  target=”_blank”>visitar</a>
-                        </div>
-                        </div>
-                        <!-- Ponpa Games -->
-                        <div id="box" class="flex">
-                        <a href="https://ponpa-games.netlify.app/"><img src="imagem/ponpagames.png" alt="ponpa games"></a>
-                        <div>
-                            <h2>Ponpa Games</h2>
-                        </div>
-                        <hr>
-                        <div>
-                            <p>Meu primeiro site desenvolvido apenas com HTML e CSS, contendo uma loja que redireciona para os produtos da Shopper. <br> Totalmente responsivo para diversos dispositivos.</p>
-                        </div>
-                        <hr>
-                        <div class="lin">
-                            <a id="butt" href="https://github.com/HugoSAugusto/ponpa-games"  target=”_blank”>source</a>
-
-                            <a id="butt" href="https://ponpa-games.netlify.app/"  target=”_blank”>visitar</a>
-                        </div>
-                        </div>  
-                    </div> 
-                <!-- <button class="btn" id="next-landing">⟩</button> -->
-            </div>                                           
-        </section>
-
-        <section id="sobre">
-            <div>
-                <h1 class ="su2">sobre mim</h1>
-                <div class="mns">
-                    <h1>Prazer, sou Hugo Augusto</h1>
-                    <div class="soin">
-                        <div>
-                            <img id="me" src="imagem/IMG_20170902_224924161.jpg" alt="me">
-                        </div>
-                        <div class="inf">
-                            <p> Sou um Desenvolvedor Júnior Front-End com habilidades em JavaScript, CSS e HTML. <br>Estou sempre em busca de aperfeiçoar minhas capacidades através da prática constante, com o objetivo de entregar soluções eficientes.</p>
-                            <div class="logos" id="contato">
-                                <div><a href="https://github.com/HugoSAugusto" target="_blank"><img src="imagem/github-logo (2).png " alt="github"></a></div>
-                                
-                                <div><a href="https://www.linkedin.com/in/hugosaugusto/" target="_blank"><img src="imagem/linkedin-logo.png" alt="linkedin"></a></div>
+            <!-- Landing Pages -->
+            <h3 class="text-3xl text-blue-400 font-extrabold mb-8 mt-16 text-center tracking-wide ">Landing Pages</h3>
+            <div class="carousel-wrapper relative w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <button id="prev-land" aria-label="Anterior" class="button-left">⟨</button>
+                <div class="">
+                    <div id="carousel-inst" class="p-40 carousel-3d flex items-center justify-center transition-transform duration-700 ease-in-out">
+                        <!-- Card 1 -->
+                        <div class="card3 justify-items-center">
+                            <a href="https://hugosaugusto.github.io/sites-de-casais/">
+                                <img src="imagem/site casais 2.jpeg" alt="Gurou" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-xl font-bold text-gray-900">Site de Casais</h4>
+                            <p class="text-gray-700 text-sm">Site simples com autenticador em JS para senha em banco pré-definido. Projeto freelancer.</p>
+                            <div class="flex justify-between my-2 mx-20">
+                                <a href="https://github.com/HugoSAugusto/sites-de-casais" target="_blank" class="text-blue-400 button-card">Source</a>
+                                <a href="https://hugosaugusto.github.io/sites-de-casais/" target="_blank" class="text-blue-400 button-card">Visitar</a>
                             </div>
                         </div>
+                    
+                        <!-- Card 2 -->
+                        <div class="card3 justify-items-center">
+                            <a href="https://drielly-bolos.netlify.app/">
+                                <img src="imagem/drielly bolos 2.jpeg" alt="Drielly Bolos" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-xl font-bold text-gray-900">Drielly Bolos</h4>
+                            <p class="text-gray-700 text-sm">Landing page responsiva, com aba para montar bolo e finalizar pelo WhatsApp com descrição automática dos itens.</p>
+                            <div class="flex justify-between my-2 mx-20">
+                                <a href="https://github.com/HugoSAugusto/Drielly---cakes" target="_blank" class="text-blue-400 button-card">Source</a>
+                                <a href="https://drielly-bolos.netlify.app/" target="_blank" class="text-blue-400 button-card">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="card3 justify-items-center">
+                            <a href="https://hugosaugusto.github.io/Mylla-Antunnes/">
+                                <img src="imagem/landingpage mylla antunnes.png" alt="Mylla Antunnes" loading="lazy" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-xl font-bold text-gray-900">Mylla Antunnes</h4>
+                            <p class="text-gray-700 text-sm">Landing page rápida com garota criada por IA e seus perfis em redes sociais.</p>
+                            <div class="flex justify-between my-2 mx-20">
+                                <a href="https://github.com/HugoSAugusto/Mylla-Antunnes" target="_blank" class="text-blue-400 button-card">Source</a>
+                                <a href="https://hugosaugusto.github.io/Mylla-Antunnes/" target="_blank" class="text-blue-400 button-card">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="card3 justify-items-center">
+                            <a href="https://hugosaugusto.github.io/Nutri-Tati/">
+                                <img src="imagem/site nutri.png" alt="Nutri Tati" loading="lazy" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-xl font-bold text-gray-900">Nutri - Tati</h4>
+                            <p class="text-gray-700 text-sm">Landing page rápida com animação fluida e responsividade completa.</p>
+                            <div class="flex justify-between my-2 mx-20">
+                                <a href="https://github.com/HugoSAugusto/Nutri-Tati" target="_blank" class="text-blue-400 button-card">Source</a>
+                                <a href="https://hugosaugusto.github.io/Nutri-Tati/" target="_blank" class="text-blue-400 button-card">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="card3 justify-items-center">
+                            <a href="https://hugosaugusto.github.io/gerador-de-frases/">
+                                <img src="imagem/gerador de frases.png" alt="Gerador de Frases" loading="lazy" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-xl font-bold text-gray-900">Gerador de Frases</h4>
+                            <p class="text-gray-700 text-sm">Exibe frases aleatórias conforme tema escolhido em botões usando JavaScript.</p>
+                            <div class="flex justify-between my-2 mx-20">
+                                <a href="https://github.com/HugoSAugusto/gerador-de-frases" target="_blank" class="text-blue-400 button-card">Source</a>
+                                <a href="https://hugosaugusto.github.io/gerador-de-frases/" target="_blank" class="text-blue-400 button-card">Visitar</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!-- Botão Próximo -->
+                <button id="next-land" aria-label="Próximo" class="button-right">⟩</button>
+            </div>
+
+            <!-- Sites Institucionais -->
+            <h3 class="text-3xl text-blue-400 font-extrabold mb-8 mt-16 text-center tracking-wide">Sites Institucionais</h3>
+            <div class="carousel-wrapper relative w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <button id="prev-inst" aria-label="Anterior" class="button-left">⟨</button>
+                <div class="">
+                    <div id="carousel-inst" class="p-40 carousel-3d flex items-center justify-center transition-transform duration-700 ease-in-out">
+                        <!-- Card 1 -->
+                        <div class="card3d justify-items-center">
+                            <a href="">
+                                <img src="imagem/gurou.png" alt="Gurou" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-xl font-bold text-gray-900">Gurou</h4>
+                            <p class="text-gray-700 text-sm">Página de teste com barra de menu responsiva e submenus.</p>
+                            <div class="flex justify-between my-2 mx-20">
+                                <a href="https://github.com/HugoSAugusto/gurou" target="_blank" class="text-blue-400 button-card">Source</a>
+                                <a href="#" target="_blank" class="text-blue-400 button-card">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="card3d justify-items-center">
+                            <a href="">
+                                <img src="imagem/ponpagames.png" alt="Ponpa Games" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-lg font-bold text-gray-900 mt-2">Ponpa Games</h4>
+                            <p class="text-gray-700 text-sm">Meu primeiro site com HTML e CSS, loja redirecionando para produtos da Shopper. Totalmente responsivo.</p>
+                            <div class="flex justify-between my-2 mx-20">
+                                <a href="https://github.com/HugoSAugusto/ponpa-games" target="_blank" class="text-blue-400 button-card">Source</a>
+                                <a href="https://ponpa-games.netlify.app/" target="_blank" class="text-blue-400 button-card">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="card3d">
+                            <a href="">
+                                <img src="imagem/drielly bolos 2.jpeg" alt="Drielly" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-lg font-bold text-gray-900 mt-2">Drielly Bolos</h4>
+                        </div>
+                    </div>
+                </div>
+                <button id="next-inst" aria-label="Próximo" class="button-right">⟩</button>
+            </div>
+
+            <!-- Sistema de Cardápio-->
+            <h3 class="text-3xl text-blue-400 font-extrabold mb-8 mt-16 text-center tracking-wide">Sistema De Cardápio</h3>
+            <div class="carousel-wrapper relative w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <button id="prev-inst" aria-label="Anterior" class="button-left">⟨</button>
+                <div class="">
+                    <div id="carousel-inst" class="p-40 carousel-3d flex items-center justify-center transition-transform duration-700 ease-in-out">
+                        <!-- Card 1 -->
+                        <div class="card3d justify-items-center">
+                            <a href="cardapios-ex.netlify.app">
+                                <img src="imagem/cardapio-1.png" alt="cardapio-online" loading="lazy" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                            </a>
+                            <h4 class="text-xl font-bold text-gray-900">Modelo de Cardápio</h4>
+                            <p class="text-gray-700 text-sm"> Cardápio digital interativo onde o cliente faz o pedido, informa o número da mesa e o sistema envia automaticamente as informações para o WhatsApp do atendente.</p>
+                            <div class="flex justify-between my-2 mx-20">
+                                <a href="https://github.com/HugoSAugusto/cadapio" target="_blank" class="text-blue-400 button-card">Source</a>
+                                <a href="cardapios-ex.netlify.app" target="_blank" class="text-blue-400 button-card">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="next-inst" aria-label="Próximo" class="button-right">⟩</button>
+            </div>
+        </section>
+
+        <section id="sobre" class="w-full bg-blue-950 text-white py-20 px-6 flex flex-col items-center">
+            <h2 class="text-4xl font-extrabold text-blue-400 mb-10 tracking-wide">Sobre mim</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl w-full">
+                <div class="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-blue-400">
+                    <img src="imagem/IMG_20170902_224924161.jpg" alt="Foto de Hugo Augusto" class="w-full h-full object-cover">
+                </div>
+                <div class="max-w-lg justify-items-center md:text-left">
+                    <h3 class="text-3xl font-semibold mb-4">Prazer, sou <span class="text-blue-400">Hugo Augusto</span></h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">Sou Desenvolvedor Front-End apaixonado por transformar ideias em interfaces modernas e responsivas. Domino <span class="text-blue-400">JavaScript, HTML, CSS</span> e estou sempre explorando novas tecnologias para aprimorar meus projetos. Meu foco é unir design, performance e experiência do usuário.</p>
+
+                    <p class="text-gray-400 italic mb-6">“Desenvolver é mais do que codar. É resolver problemas com criatividade e propósito.” </p>
+
+                    <div class="border-t border-gray-700 text-center text-gray-400 ">
+                        <div class="flex md:justify-start gap-6 mt-4">
+                            <a href="https://github.com/HugoSAugusto" target="_blank" class="hover:scale-110 transition">
+                                <img src="imagem/github-logo (2).png" alt="GitHub" class="w-8 h-8">
+                            </a>
+                            <a href="https://www.linkedin.com/in/hugosaugusto/" target="_blank" class="hover:scale-110 transition">
+                                <img src="imagem/linkedin-logo.png" alt="LinkedIn" class="w-8 h-8">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
         </section>
     </main>
 
-    <footer>
-        <cite><p>"Se você não sabe para onde ir, qualquer caminho serve"</cite>   <br>  Lewis Carroll</p>
+    <footer class="bg-blue-950 text-white py-12 px-6 flex flex-col items-center gap-6 mt-16 w-full">
+        <!-- <div class="text-center mt-6">
+            <h3 class="text-2xl font-semibold mb-3">Baixe um modelo de Currículo Vitae</h3>
+            <p class="text-gray-400 mb-4 text-sm">Um template simples e moderno para preencher e usar em suas candidaturas.</p>
 
-        2024 HugoSAugusto. Todos os direitos reservados.
+            <a href="downloads/modelo-curriculo.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300">📄 Baixar Modelo PDF </a>
+        </div> -->
+        <p class="italic text-gray-300 text-center max-w-lg">
+            “Se você não sabe para onde ir, qualquer caminho serve.”
+            <br><span class="text-blue-400">— Lewis Carroll</span>
+        </p>
+        <div class="border-t border-gray-700 pt-4 text-center text-gray-400 text-sm">
+            <p>© 2024 <span class="text-blue-400">HugoSAugusto</span>. Todos os direitos reservados.</p>
+        </div>
     </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/navegacao.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuHamburger = document.querySelector('.menu-hamburger');
+            const navMenu = document.querySelector('nav');
+
+            // Abre/fecha o menu
+            menuHamburger.addEventListener('click', (e) => {
+                e.stopPropagation(); // evita fechar ao clicar no próprio botão
+                if (navMenu.classList.contains('hidden')) {
+                    navMenu.classList.remove('hidden');
+                    navMenu.style.maxHeight = navMenu.scrollHeight + 'px'; // anima altura
+                } else {
+                    navMenu.style.maxHeight = '0';
+                    setTimeout(() => navMenu.classList.add('hidden'), 400);
+                }
+            });
+
+            // Fecha menu ao clicar em algum link (opcional)
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 768) {
+                        navMenu.style.maxHeight = '0';
+                        setTimeout(() => navMenu.classList.add('hidden'), 400);
+                    }
+                });
+            });
+
+            // Fecha o menu se clicar fora dele
+            document.addEventListener('click', (e) => {
+                const isClickInsideMenu = navMenu.contains(e.target);
+                const isClickOnButton = menuHamburger.contains(e.target);
+
+                if (!isClickInsideMenu && !isClickOnButton && window.innerWidth < 768) {
+                    navMenu.style.maxHeight = '0';
+                    setTimeout(() => navMenu.classList.add('hidden'), 400);
+                }
+            });
+
+            // Ajusta visibilidade em telas grandes
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    navMenu.classList.remove('hidden');
+                    navMenu.style.maxHeight = 'none';
+                } else {
+                    navMenu.classList.add('hidden');
+                    navMenu.style.maxHeight = '0';
+                }
+            });
+        });
+
+
+        //Rolamento Suave
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    const offset = target.getBoundingClientRect().top + window.scrollY - 70; 
+                    window.scrollTo({ top: offset, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+    <script src="js/carrossel.js"></script>
 </body>
 
 </html>

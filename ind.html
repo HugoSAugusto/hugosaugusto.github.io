@@ -1,0 +1,93 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+<body class="flex flex-col items-center w-full overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header class="w-full bg-gradient-to-r from-blue-950 to-blue-700 text-white shadow-md flex justify-between items-center flex-wrap px-4 py-3">
+        <!-- Título -->
+        <div class="flex flex-col gap-1 min-w-0">
+            <h1 class="text-2xl sm:text-3xl font-extrabold truncate">Hugo Augusto</h1>
+            <h2 class="text-lg sm:text-2xl truncate">Dev Front-End</h2>
+        </div>
+
+        <!-- Menu desktop -->
+        <nav class="hidden md:flex flex-1 justify-end">
+            <ul class="flex gap-4 flex-wrap">
+                <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#projetos">PROJETOS</a></li>
+                <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#sobre">SOBRE</a></li>
+                <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <!-- Menu mobile -->
+        <div class="menu-hamburger text-2xl cursor-pointer select-none md:hidden">
+            ☰
+        </div>
+    </header>
+
+    <main>
+  <section id="projetos" class="w-full flex flex-col items-center py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+  <h2 class="text-3xl font-extrabold mb-10">Projetos</h2>
+
+  <div class="relative w-full max-w-6xl">
+    <!-- Botão anterior -->
+    <button id="prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
+      ⟨
+    </button>
+
+    <!-- Container do carrossel -->
+    <div id="carousel" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 px-12 pb-4 scrollbar-hide">
+      <!-- Card 1 -->
+      <div class="flex-none w-80 bg-white text-gray-800 rounded-xl shadow-lg snap-center transform transition-transform hover:scale-105">
+        <img src="imagem/site casais 2.jpeg" alt="Site de Casais" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Site de Casais</h3>
+          <p class="text-sm text-gray-600 mt-2">Site simples com autenticação JS para senha pré-definida. Projeto freelancer.</p>
+          <div class="flex justify-between mt-4 text-blue-600 text-sm font-medium">
+            <a href="https://github.com/HugoSAugusto/sites-de-casais" target="_blank" class="hover:underline">Source</a>
+            <a href="https://hugosaugusto.github.io/sites-de-casais/" target="_blank" class="hover:underline">Visitar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex-none w-80 bg-white text-gray-800 rounded-xl shadow-lg snap-center transform transition-transform hover:scale-105">
+        <img src="imagem/drielly bolos 2.jpeg" alt="Drielly Bolos" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Drielly Bolos</h3>
+          <p class="text-sm text-gray-600 mt-2">Landing page com pedido automático via WhatsApp e responsividade total.</p>
+          <div class="flex justify-between mt-4 text-blue-600 text-sm font-medium">
+            <a href="https://github.com/HugoSAugusto/Drielly---cakes" target="_blank" class="hover:underline">Source</a>
+            <a href="https://drielly-bolos.netlify.app/" target="_blank" class="hover:underline">Visitar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex-none w-80 bg-white text-gray-800 rounded-xl shadow-lg snap-center transform transition-transform hover:scale-105">
+        <img src="imagem/landingpage mylla antunnes.png" alt="Mylla Antunnes" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Mylla Antunnes</h3>
+          <p class="text-sm text-gray-600 mt-2">Landing page com personagem IA e links para redes sociais.</p>
+          <div class="flex justify-between mt-4 text-blue-600 text-sm font-medium">
+            <a href="https://github.com/HugoSAugusto/Mylla-Antunnes" target="_blank" class="hover:underline">Source</a>
+            <a href="https://hugosaugusto.github.io/Mylla-Antunnes/" target="_blank" class="hover:underline">Visitar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão próximo -->
+    <button id="next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
+      ⟩
+    </button>
+  </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-blue-950 text-white text-center py-6 mt-10">
+        <p>"Se você não sabe para onde ir, qualquer caminho serve" — Lewis Carroll</p>
+        <p>2024 HugoSAugusto. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
