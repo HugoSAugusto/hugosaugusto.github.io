@@ -57,8 +57,4 @@
         opacity: 0;
         z-index: 0;
     }
-
-    #mobile-nav.open {
-        max-height: 350px !important;
-    }
 }
