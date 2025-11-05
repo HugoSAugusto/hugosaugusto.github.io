@@ -14,20 +14,22 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="./public/style.css">
     <link rel="shortcut icon" href="imagem/profile.png" type="image/x-icon">
-    
+
 </head>
 
-<body class="flex flex-col items-center w-full overflow-x-hidden">
-    <header class="bg-blue-950 text-white shadow-md flex justify-between items-center flex-wrap px-5 py-4 w-full">
+<body class="flex flex-col items-center w-full overflow-x-hidden bg-black/70 ">
+    <canvas id="node-bg" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+    <header class=" text-white shadow-md flex justify-between items-center flex-wrap px-5 py-4 w-full">
         <div class="pl-20 flex flex-col gap-1 min-w-0">
             <h1 class="text-3xl sm:text-3xl font-extrabold truncate">Hugo Augusto</h1><br>
             <h2 class="text-2xl sm:text-2xl truncate">Dev Front-End</h2>
         </div>
-        <nav class="hidden md:flex flex-col md:flex-row flex-1 justify-end bg-blue-950 text-white absolute md:static top-19 w-full md:-1 transition-all duration-300 ease-in-out overflow-hidden">
+        <nav class="hidden md:flex flex-col md:flex-row flex-1 justify-end  text-white absolute md:static top-19 w-full md:-1 transition-all duration-300 ease-in-out overflow-hidden">
             <ul class="flex flex-col md:flex-row gap-2 md:gap-4 p-2 md:p-0 items-end md:items-center text-right md:text-left">
                 <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#projetos">PROJETOS</a></li>
                 <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#sobre">SOBRE</a></li>
                 <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="#sobre">CONTATO</a></li>
+                <li class="hover:bg-white/10 px-3 py-1 rounded-full"><a href="imagem/modelo-curriculo.pdf" target="_blank"> MEU CURRÍCULO</a></li>
             </ul>
         </nav>
 
@@ -35,10 +37,10 @@
             ☰
         </div>
     </header>
-    
-    <main class="w-full mt-4 overflow-x-hidden">
-        <section id="projetos" class="w-full flex flex-col items-center bg-blue-950 text-white py-6">
-            <h2 class="text-4xl text-blue-400 font-extrabold mb-8 ">Projetos</h2>
+
+    <main class="w-full mt-4 overflow-x-hidden ">
+        <section id="projetos" class="w-full flex flex-col items-center  text-white py-6">
+            <h2 class="text-4xl text-blue-400 font-extrabold mb-8 reveal">Projetos</h2>
 
             <!-- Landing Pages -->
             <h3 class="text-3xl text-blue-400 font-extrabold mb-8 mt-16 text-center tracking-wide ">Landing Pages</h3>
@@ -58,7 +60,7 @@
                                 <a href="https://hugosaugusto.github.io/sites-de-casais/" target="_blank" class="text-blue-400 button-card">Visitar</a>
                             </div>
                         </div>
-                    
+
                         <!-- Card 2 -->
                         <div class="card3 justify-items-center">
                             <a href="https://drielly-bolos.netlify.app/">
@@ -110,7 +112,7 @@
                                 <a href="https://hugosaugusto.github.io/gerador-de-frases/" target="_blank" class="text-blue-400 button-card">Visitar</a>
                             </div>
                         </div>
-                    
+
                     </div>
                 </div>
                 <!-- Botão Próximo -->
@@ -190,9 +192,9 @@
             </div>
         </section>
 
-        <section id="sobre" class="w-full bg-blue-950 text-white py-20 px-6 flex flex-col items-center">
+        <section id="sobre" class="w-full  text-white py-20 px-6 flex flex-col items-center">
             <h2 class="text-4xl font-extrabold text-blue-400 mb-10 tracking-wide">Sobre mim</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl w-full">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl w-full ">
                 <div class="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-blue-400">
                     <img src="imagem/IMG_20170902_224924161.jpg" alt="Foto de Hugo Augusto" class="w-full h-full object-cover">
                 </div>
@@ -217,13 +219,7 @@
         </section>
     </main>
 
-    <footer class="bg-blue-950 text-white py-12 px-6 flex flex-col items-center gap-6 mt-16 w-full">
-        <!-- <div class="text-center mt-6">
-            <h3 class="text-2xl font-semibold mb-3">Baixe um modelo de Currículo Vitae</h3>
-            <p class="text-gray-400 mb-4 text-sm">Um template simples e moderno para preencher e usar em suas candidaturas.</p>
-
-            <a href="downloads/modelo-curriculo.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300">📄 Baixar Modelo PDF </a>
-        </div> -->
+    <footer class="bg-black/50 text-white py-5 px-1 flex flex-col items-center gap-6 mt-16 w-full">
         <p class="italic text-gray-300 text-center max-w-lg">
             “Se você não sabe para onde ir, qualquer caminho serve.”
             <br><span class="text-blue-400">— Lewis Carroll</span>
@@ -234,6 +230,60 @@
     </footer>
 
     <script>
+        //canvas
+        const canvas = document.getElementById("node-bg");
+        const ctx = canvas.getContext("2d");
+
+        let width, height, points;
+        const pointCount = 50;
+
+        function init() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            points = [...Array(pointCount)].map(() => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                dx: (Math.random() - 0.5) * 0.5,
+                dy: (Math.random() - 0.5) * 0.5
+            }));
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            points.forEach(p => {
+                p.x += p.dx;
+                p.y += p.dy;
+
+                if (p.x < 0 || p.x > width) p.dx *= -1;
+                if (p.y < 0 || p.y > height) p.dy *= -1;
+            });
+
+            // linhas conectando pontos próximos
+            for (let i = 0; i < pointCount; i++) {
+                for (let j = i + 1; j < pointCount; j++) {
+                    const dx = points[i].x - points[j].x;
+                    const dy = points[i].y - points[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 150) {
+                        ctx.strokeStyle = `rgba(59,130,246,${1 - dist / 150})`;
+                        ctx.beginPath();
+                        ctx.moveTo(points[i].x, points[i].y);
+                        ctx.lineTo(points[j].x, points[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener("resize", init);
+
+        init();
+        animate();
+
+        //menu
         document.addEventListener('DOMContentLoaded', () => {
             const menuHamburger = document.querySelector('.menu-hamburger');
             const navMenu = document.querySelector('nav');
@@ -284,14 +334,13 @@
             });
         });
 
-
         //Rolamento Suave
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', e => {
                 e.preventDefault();
                 const target = document.querySelector(link.getAttribute('href'));
                 if (target) {
-                    const offset = target.getBoundingClientRect().top + window.scrollY - 70; 
+                    const offset = target.getBoundingClientRect().top + window.scrollY - 70;
                     window.scrollTo({ top: offset, behavior: 'smooth' });
                 }
             });
